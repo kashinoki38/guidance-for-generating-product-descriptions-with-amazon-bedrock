@@ -80,8 +80,8 @@ function App({ signOut, user }) {
                     accept: '*/*',
                     endpoint: '/api/conversation/predict-claude',
                     body: JSON.stringify({
-                        prompt: `Build me a product Description using 120 words or less. Here is additional information about the product photograph ${output}`,
-                        max_tokens_to_sample: 300,
+                        prompt: `Build me a product Description using 150 words or less in Japanese. Here is additional information about the product photograph ${output}`,
+                        max_tokens_to_sample: 500,
                         temperature: 0.5,
                         top_k: 250,
                         top_p: 1,
