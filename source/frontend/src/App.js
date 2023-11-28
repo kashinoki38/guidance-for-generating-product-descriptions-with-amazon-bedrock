@@ -100,7 +100,7 @@ function App({ signOut, user }) {
                     .then((response) => response.json())
                     .then((data) => {
                         
-                        // setResponseText(output+"\n"+JSON.parse(data.body))
+                        setResponseText(output+"\n"+JSON.parse(data.body))
                         handleTranslations(output+"\n"+JSON.parse(data.body))
                     }
                     )
