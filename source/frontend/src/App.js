@@ -69,6 +69,7 @@ function App({ signOut, user }) {
             )
             .then((response) => response.json())
             .then((data) => {
+                // console.log("testtesttesttest")
                 console.log(JSON.parse(data.body).labels)
                 // console.log(data.labels)
                 setImageResponse(URL.createObjectURL(event.target.files[0]));
@@ -99,8 +100,8 @@ function App({ signOut, user }) {
                     .then((response) => response.json())
                     .then((data) => {
                         
-                        setResponseText(JSON.parse(data.body))
-                        handleTranslations(JSON.parse(data.body))
+                        // setResponseText(output+"\n"+JSON.parse(data.body))
+                        handleTranslations(output+"\n"+JSON.parse(data.body))
                     }
                     )
                     .catch((error) => console.error("Error:", error))
